@@ -1,0 +1,64 @@
+baseURL = 'https://dbpprt.github.io/between-minds/'
+languageCode = 'en'
+title = 'Between Minds Project'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term', 'RSS']
+
+[params]
+description = 'A psychology-informed space by Shammi and Alisa for essays, workshops, and reflective conversations on parenting, relationships, and personal change.'
+author = 'Shammi and Alisa'
+tagline = 'A project by Shammi and Alisa'
+brandLead = 'Between'
+brandFocus = 'Minds'
+brandTail = 'Project'
+brandByline = 'by Shammi and Alisa'
+instagramHandle = '@betweenmindsproject'
+instagramUrl = 'https://www.instagram.com/betweenmindsproject/'
+mediumUrl = 'https://medium.com/@shammibappert'
+footerSummary = "A psychology-informed project shaped around essays, workshops, reflective conversations, and Shammi's forthcoming book Puddles, Patience, and Play."
+legalNotice = 'Public contact is available via Medium and Instagram.'
+
+[[menus.main]]
+name = 'Story'
+url = '#story'
+weight = 10
+
+[[menus.main]]
+name = 'Founders'
+url = '#founders'
+weight = 20
+
+[[menus.main]]
+name = 'Offerings'
+url = '#offerings'
+weight = 30
+
+[[menus.main]]
+name = 'Journal'
+url = '#journal'
+weight = 40
+
+[[menus.main]]
+name = 'Contact'
+url = '#contact'
+weight = 50
+
+[[menus.footer]]
+name = 'Impressum'
+pageRef = '/impressum'
+weight = 10
+
+[[menus.footer]]
+name = 'Datenschutz'
+pageRef = '/datenschutz'
+weight = 20
+
+[[menus.footer]]
+name = 'Instagram'
+url = 'https://www.instagram.com/betweenmindsproject/'
+weight = 30
+
+[[menus.footer]]
+name = 'Medium'
+url = 'https://medium.com/@shammibappert'
+weight = 40

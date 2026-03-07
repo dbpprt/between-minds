@@ -1,0 +1,187 @@
+{{ define "main" }}
+  {{ $hero := .Params.hero }}
+  {{ $story := .Params.story }}
+  {{ $founders := .Params.founders }}
+  {{ $offerings := .Params.offerings }}
+  {{ $journal := .Params.journal }}
+  {{ $community := .Params.community }}
+  {{ $contact := .Params.contact }}
+
+  <main id="content">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">{{ $hero.eyebrow }}</p>
+          <h1>{{ $hero.title }}</h1>
+          <p class="hero-intro">{{ $hero.intro }}</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="{{ $hero.primary.url }}">{{ $hero.primary.label }}</a>
+            <a class="button button-secondary" href="{{ $hero.secondary.url }}">{{ $hero.secondary.label }}</a>
+          </div>
+          <div class="hero-note">
+            <p class="note-kicker">Positioning note</p>
+            <p>{{ $hero.note }}</p>
+          </div>
+        </div>
+        <div class="hero-visuals">
+          <div class="logo-card">
+            <img src="{{ $hero.mark | relURL }}" alt="{{ $hero.mark_alt }}">
+          </div>
+          <figure class="hero-image-frame">
+            <img src="{{ $hero.image | relURL }}" alt="{{ $hero.image_alt }}">
+          </figure>
+          <div class="hero-caption">
+            <p class="note-kicker">Project shape</p>
+            <p>Writing, courses, workshops, and conversation-led work held by two complementary perspectives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section story-band" id="story">
+      <div class="container story-grid">
+        <div class="story-copy">
+          <p class="eyebrow">Project story</p>
+          <h2>{{ $story.title }}</h2>
+          <p class="section-text">{{ $story.text }}</p>
+        </div>
+        <div class="story-points">
+          {{ range $story.points }}
+            <article class="story-card">
+              <p class="story-card-title">{{ .title }}</p>
+              <p>{{ .text }}</p>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section founders-section" id="founders">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Founders</p>
+          <h2>{{ $founders.title }}</h2>
+          <p class="section-text">{{ $founders.intro }}</p>
+        </div>
+        <div class="founders-grid">
+          {{ range $founders.members }}
+            <article class="founder-card">
+              <figure class="founder-media">
+                <img src="{{ .image | relURL }}" alt="{{ .image_alt }}" loading="lazy">
+              </figure>
+              <div class="founder-body">
+                <p class="card-eyebrow">{{ .role }}</p>
+                <h3>{{ .name }}</h3>
+                <p>{{ .bio }}</p>
+                <ul class="tag-list">
+                  {{ range .tags }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section offerings-section" id="offerings">
+      <div class="container offerings-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Offerings</p>
+          <h2>{{ $offerings.title }}</h2>
+          <p class="section-text">{{ $offerings.intro }}</p>
+        </div>
+        <div class="offerings-grid">
+          {{ range $offerings.items }}
+            <article class="offering-card">
+              <p class="offering-number">{{ .number }}</p>
+              <h3>{{ .title }}</h3>
+              <p>{{ .text }}</p>
+            </article>
+          {{ end }}
+        </div>
+        <p class="offerings-note">{{ $offerings.note }}</p>
+      </div>
+    </section>
+
+    <section class="section journal-section" id="journal">
+      <div class="container journal-shell">
+        <div class="journal-copy">
+          <div class="journal-marquee" aria-hidden="true">
+            <span>{{ $journal.kicker }}</span>
+            <span>{{ $journal.kicker }}</span>
+            <span>{{ $journal.kicker }}</span>
+          </div>
+          <p class="eyebrow">Journal</p>
+          <h2>{{ $journal.title }}</h2>
+          <p class="section-text">{{ $journal.text }}</p>
+          <div class="hero-actions">
+            {{ range $journal.actions }}
+              {{ $external := hasPrefix .url "http" }}
+              <a class="button button-{{ .style }}" href="{{ .url }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }}</a>
+            {{ end }}
+          </div>
+          <div class="essay-list">
+            {{ range $journal.essays }}
+              {{ $external := hasPrefix .url "http" }}
+              <a class="essay-link" href="{{ .url }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>
+                <span class="essay-title">{{ .title }}</span>
+                <span class="essay-text">{{ .text }}</span>
+              </a>
+            {{ end }}
+          </div>
+        </div>
+        <figure class="journal-poster">
+          <img src="{{ $journal.image | relURL }}" alt="{{ $journal.image_alt }}" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section community-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Community</p>
+          <h2>{{ $community.title }}</h2>
+          <p class="section-text">{{ $community.intro }}</p>
+        </div>
+        <div class="quote-grid">
+          {{ range $community.items }}
+            <article class="quote-card">
+              <p>{{ .text }}</p>
+              <p class="quote-source">{{ .source }}</p>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-shell">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>{{ $contact.title }}</h2>
+          <p class="section-text">{{ $contact.text }}</p>
+          <div class="hero-actions">
+            {{ range $contact.actions }}
+              {{ $external := hasPrefix .url "http" }}
+              <a class="button button-{{ .style }}" href="{{ .url }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }}</a>
+            {{ end }}
+          </div>
+        </div>
+        <div class="contact-card">
+          {{ range $contact.channels }}
+            <div class="contact-row">
+              <p class="contact-label">{{ .label }}</p>
+              {{ if .href }}
+                <a class="contact-value" href="{{ .href }}">{{ .value }}</a>
+              {{ else }}
+                <p class="contact-value">{{ .value }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </main>
+{{ end }}
