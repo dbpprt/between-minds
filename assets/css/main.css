@@ -229,6 +229,10 @@ ol {
 .book-shell,
 .page-hero-grid,
 .detail-grid,
+.about-hero-grid,
+.about-story-grid,
+.about-founders-grid,
+.about-practice-grid,
 .footer-grid {
   display: grid;
   gap: 1.6rem;
@@ -240,6 +244,10 @@ ol {
 .book-shell > *,
 .page-hero-grid > *,
 .detail-grid > *,
+.about-hero-grid > *,
+.about-story-grid > *,
+.about-founders-grid > *,
+.about-practice-grid > *,
 .footer-grid > * {
   min-width: 0;
 }
@@ -587,6 +595,42 @@ h3 {
   align-items: start;
 }
 
+.about-hero-grid {
+  grid-template-columns: minmax(0, 0.94fr) minmax(22rem, 1.06fr);
+  align-items: start;
+}
+
+.about-visual {
+  position: relative;
+  min-height: 100%;
+  padding: 0 0 0 1.2rem;
+}
+
+.about-duo-frame {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2.2rem 2.2rem 4.6rem 2.2rem;
+  background: var(--mist);
+  box-shadow: 0 32px 76px rgba(51, 73, 86, 0.14);
+}
+
+.about-duo-frame img {
+  width: 100%;
+  aspect-ratio: 3 / 2.28;
+  object-fit: cover;
+}
+
+.about-visual-card {
+  position: relative;
+  z-index: 2;
+  width: min(23rem, calc(100% - 2rem));
+  margin: -4.4rem 0 0 auto;
+}
+
+.about-hero-tags {
+  margin-top: 1.4rem;
+}
+
 .prose-card,
 .detail-card {
   background: rgba(255, 255, 255, 0.76);
@@ -618,6 +662,93 @@ h3 {
 .detail-list {
   display: grid;
   gap: 0.7rem;
+}
+
+.about-story-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  align-items: start;
+}
+
+.about-story-card {
+  padding: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.about-story-card p {
+  max-width: 42rem;
+  font-size: 1.08rem;
+}
+
+.about-story-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-partnership-card {
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(233, 239, 241, 0.9), rgba(255, 255, 255, 0.82));
+}
+
+.partnership-title {
+  margin-bottom: 0.8rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.about-founders-section {
+  padding-top: 0.4rem;
+}
+
+.about-founders-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.founder-card {
+  display: grid;
+  grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  align-items: start;
+}
+
+.founder-image {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  box-shadow: 0 18px 44px rgba(51, 73, 86, 0.12);
+}
+
+.founder-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1.18;
+  object-fit: cover;
+}
+
+.founder-copy h3 {
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+}
+
+.founder-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-practice-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-practice-card {
+  min-height: 15rem;
+}
+
+.about-practice-card h3 {
+  max-width: 12ch;
 }
 
 .form-shell {
@@ -747,10 +878,14 @@ h3 {
 @media (max-width: 1100px) {
   .hero-grid,
   .page-hero-grid,
+  .about-hero-grid,
   .story-grid,
   .offerings-grid-three,
   .book-shell,
   .detail-grid,
+  .about-story-grid,
+  .about-founders-grid,
+  .about-practice-grid,
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -780,6 +915,15 @@ h3 {
 
   .book-poster {
     justify-self: start;
+  }
+
+  .about-visual {
+    padding-left: 0;
+  }
+
+  .about-visual-card {
+    width: min(24rem, 100%);
+    margin-top: 1rem;
   }
 }
 
@@ -814,6 +958,14 @@ h3 {
 
   .hero-image-frame {
     border-radius: 1.8rem 1.8rem 3rem 1.8rem;
+  }
+
+  .about-duo-frame {
+    border-radius: 1.8rem 1.8rem 3rem 1.8rem;
+  }
+
+  .founder-card {
+    grid-template-columns: 1fr;
   }
 
   .field-grid {

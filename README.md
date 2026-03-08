@@ -7,10 +7,12 @@ Production URL: `https://dbpprt.github.io/between-minds/`
 ## Development
 
 ```bash
-hugo server
+make dev
 ```
 
-Open the local preview at `http://localhost:1313/`.
+This runs Hugo with `--disableFastRender`, which avoids the incremental render crash that can happen on this project when editing content-heavy pages such as `upcoming-book.md`.
+
+Open the local preview at `http://localhost:1313/between-minds/`.
 
 ## Production build
 
