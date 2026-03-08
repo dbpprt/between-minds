@@ -11,7 +11,8 @@ highlights:
   - "Dark personality traits"
   - "Self-trust and boundaries"
 cta_label: "Read the Latest Insights on Relational Dynamics"
-cta_url: "https://medium.com/@shammibappert"
+cta_url: "/contact/"
+detail_title: "What this covers"
 ---
 
 This pathway is for people who feel disoriented inside a relationship and want language that is clinically grounded, emotionally clear, and practically useful.

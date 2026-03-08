@@ -11,7 +11,8 @@ highlights:
   - "Connection over control"
   - "Parental mental wellness"
 cta_label: "Explore Parenting Resources"
-cta_url: "https://medium.com/@shammibappert"
+cta_url: "/upcoming-book/"
+detail_title: "What this covers"
 ---
 
 Parenting is one of the most intimate places where inherited patterns reappear. This pathway brings research into the home without turning family life into a lecture hall.
@@ -21,7 +22,7 @@ Parenting is one of the most intimate places where inherited patterns reappear. 
 - Understanding the parent-child dynamic as a real psychological relationship
 - Building resilience through co-regulation, repair, and mindful communication
 - Responding to behaviour with context, not just control
-- Protecting your own nervous system while caring for a child
+- Protecting your own emotional bandwidth while caring for a child
 
 ## What you will find here
 

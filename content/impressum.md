@@ -15,10 +15,8 @@ Eine ladungsfaehige Postanschrift wird auf dieser Website derzeit nicht veroeffe
 
 ## Oeffentliche Kontaktwege
 
-- Medium: [medium.com/@shammibappert](https://medium.com/@shammibappert)  
+- E-Mail: [betweenmindsproject@gmail.com](mailto:betweenmindsproject@gmail.com)  
 - Instagram: [instagram.com/betweenmindsproject](https://www.instagram.com/betweenmindsproject/)
-
-Eine gesonderte Projekt-E-Mail-Adresse oder Telefonnummer wird auf dieser Website derzeit nicht veroeffentlicht.
 
 ## Redaktionell verantwortlich
 

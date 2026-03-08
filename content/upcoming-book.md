@@ -1,43 +1,43 @@
 ---
-title: "Upcoming Book"
-description: "Puddles, Patience and Play is the forthcoming Between Minds Project book on healing through connection."
+title: "Puddles, Patience and Play"
+description: "A warm, research-backed guide to raising emotionally intelligent children from birth to five."
 page_eyebrow: "Upcoming Book"
-lead: "Puddles, Patience and Play is the forthcoming Between Minds Project book on healing through connection, regulation, and everyday relational repair."
+lead: "What Every Parent Needs to Know About Raising Emotionally Intelligent Kids from Birth to Five"
+hero_meta: "By Shammi - Psychologist, PhD Researcher & Mother"
 page_theme: "book"
 page_image: "/images/life-changes-poster.webp"
 page_image_alt: "Poster asking how you respond when life changes"
-visual_title: "From the lab to the living room"
-visual_text: "A researcher’s guide to healing through connection. Coming soon."
+visual_title: "From research to the living room"
+visual_text: "A warm, clinically grounded guide for the exhausted, loving reality of early parenthood."
+detail_title: "What you can expect"
 highlights:
-  - "Research translated for home"
-  - "Repair, regulation, and connection"
-  - "Launch updates and early book news"
-form_mode: "dm"
-form_title: "Join the Waitlist"
-form_text: "The waitlist lives on Instagram DM. Copy the note below if you want a ready-made message, then open the Between Minds inbox and send it there."
+  - "Real Moments"
+  - "Warm Science"
+  - "One Small Step Practices"
+form_mode: "waitlist"
+form_title: "Join the Village"
+form_text: "Parenting was never meant to be done alone - and sometimes, the village has to be built from scratch. Join the waitlist to follow the book's journey to publication and receive early access to sample chapters, behind-the-scenes updates, and evidence-based emotional intelligence tools from Between Minds Project."
 form_submit: "Copy Waitlist Message"
-form_note: "Send the word \"waitlist\" in Instagram DM and Shammi and Alisa can reply there directly."
+form_note: "To join, send a message to betweenmindsproject@gmail.com or DM @betweenmindsproject on Instagram with the word 'waitlist' - and anything you'd like Shammi to know."
 form_actions:
-  - label: "Open Instagram DM"
-    url: "https://ig.me/m/betweenmindsproject"
+  - label: "Email the Waitlist"
+    url: "mailto:betweenmindsproject@gmail.com?subject=Waitlist%20for%20Puddles%2C%20Patience%20and%20Play"
     style: "secondary"
-  - label: "Read the Insights"
-    url: "https://medium.com/@shammibappert"
+  - label: "Instagram DM"
+    url: "https://ig.me/m/betweenmindsproject"
     style: "ghost"
 ---
 
-Puddles, Patience and Play brings the tone of Between Minds into long-form work: research that is precise, compassionate, and usable inside everyday family life.
+*Puddles, Patience and Play* sits at the intersection of two cultures - the collective warmth of an Indian upbringing and the structured, nature-focused independence of Germany. It is a guide to raising emotionally intelligent children that bridges the gap between deep clinical research and the exhausted reality of parenting.
 
-## What the book is about
-
-The book moves from the lab to the living room. It asks what healing looks like when it is grounded in relationship, nervous-system awareness, and the small moments that actually shape a home.
+I wrote this book to take the most profound findings in neuroscience and attachment theory and translate them into something warm, human, and usable at 3am - because that's when parents actually need it.
 
 ## What readers can expect
 
-- grounded psychological framing without jargon overload
-- reflective tools for parenting and relational repair
-- language for understanding cycles before they harden into identity
+- **Real Moments** - relatable stories of kitchen-floor tantrums, supermarket standoffs, and the quiet magic of puddle-jumping.
+- **Warm Science** - complex brain development and attachment theory explained simply, so you can understand why your child is acting out - not just how to stop it.
+- **One Small Step Practices** - every chapter ends with an actionable exercise you can use today, without extra time or equipment, to bring calm and connection back to your home.
 
 ## How to join
 
-The waitlist is handled through Instagram DM rather than email. If you want to join, send a short message there with the word **waitlist** and any context you want Shammi and Alisa to know.
+To join, send a message to [betweenmindsproject@gmail.com](mailto:betweenmindsproject@gmail.com) or DM [@betweenmindsproject](https://www.instagram.com/betweenmindsproject/) on Instagram with the word **waitlist** - and anything you'd like Shammi to know.

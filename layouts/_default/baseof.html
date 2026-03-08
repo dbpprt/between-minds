@@ -17,7 +17,7 @@
     <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
     <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
     <meta property="og:url" content="{{ .Permalink }}">
-    <meta name="theme-color" content="#eef035">
+    <meta name="theme-color" content="#334956">
     <link rel="icon" href="{{ `favicon.svg` | relURL }}" type="image/svg+xml">
     {{ with resources.Get "css/main.css" }}
       {{ $styles := . | minify | fingerprint }}
@@ -75,7 +75,7 @@
             </ul>
           </div>
           <div>
-            <p class="footer-eyebrow">Launch note</p>
+            <p class="footer-eyebrow">Site note</p>
             <p class="footer-summary">{{ site.Params.legalNotice }}</p>
           </div>
         </div>

@@ -8,55 +8,22 @@
           {{ with .Params.lead }}
             <p class="hero-intro">{{ . }}</p>
           {{ end }}
-          {{ with .Params.cta_label }}
-            {{ $ctaUrl := $.Params.cta_url }}
-            {{ $ctaExternal := hasPrefix $ctaUrl "http" }}
-            {{ if not $ctaExternal }}
-              {{ $ctaUrl = $ctaUrl | strings.TrimPrefix `/` | relURL }}
-            {{ end }}
-            <div class="hero-actions">
-              <a class="button button-primary" href="{{ $ctaUrl }}"{{ if $ctaExternal }} target="_blank" rel="noreferrer"{{ end }}>{{ . }}</a>
-            </div>
-          {{ end }}
-          {{ with .Params.highlights }}
-            <ul class="tag-list about-hero-tags">
-              {{ range . }}
-                <li>{{ . }}</li>
-              {{ end }}
-            </ul>
-          {{ end }}
         </div>
-        <aside class="about-visual">
+        <aside class="about-visual about-visual-simple">
           {{ with .Params.page_image }}
             <figure class="about-duo-frame">
               <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="{{ $.Params.page_image_alt }}">
             </figure>
-          {{ end }}
-          {{ with .Params.visual_title }}
-            <div class="page-visual-card about-visual-card">
-              <p class="note-kicker">{{ $.Params.page_eyebrow | default site.Title }}</p>
-              <p class="page-visual-title">{{ . }}</p>
-              {{ with $.Params.visual_text }}
-                <p>{{ . }}</p>
-              {{ end }}
-            </div>
           {{ end }}
         </aside>
       </div>
     </section>
 
     <section class="section section-tight">
-      <div class="container about-story-grid">
-        <article class="prose-card about-story-card">
+      <div class="container">
+        <article class="prose-card about-story-card about-intro-card">
           {{ .Content }}
         </article>
-        {{ with .Params.collaboration_text }}
-          <aside class="detail-card about-partnership-card">
-            <p class="note-kicker">Working rhythm</p>
-            <p class="partnership-title">{{ $.Params.collaboration_title }}</p>
-            <p>{{ . }}</p>
-          </aside>
-        {{ end }}
       </div>
     </section>
 
@@ -65,19 +32,24 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Founders</p>
-            <h2>Built by Shammi and Alisa</h2>
-            <p class="section-text">Two complementary perspectives shape the project: research translation on one side, relational care and emotional safety on the other.</p>
+            <h2>Meet Shammi and Alisa</h2>
+            <p class="section-text">Between Minds Project is shaped by one voice rooted in clinical psychology and one rooted in design, emotional tone, and how reflective work feels in the body.</p>
           </div>
-          <div class="about-founders-grid">
+          <div class="about-founder-stack">
             {{ range . }}
-              <article class="founder-card">
+              <article class="founder-panel">
                 <figure class="founder-image">
                   <img src="{{ .image | strings.TrimPrefix `/` | relURL }}" alt="{{ .image_alt }}">
                 </figure>
                 <div class="founder-copy">
-                  <p class="note-kicker">{{ .role }}</p>
+                  <p class="note-kicker">{{ .title }}</p>
                   <h3>{{ .name }}</h3>
-                  <p>{{ .bio }}</p>
+                  {{ with .credentials }}
+                    <p class="founder-credentials">{{ . }}</p>
+                  {{ end }}
+                  <div class="founder-bio">
+                    {{ .bio | markdownify }}
+                  </div>
                 </div>
               </article>
             {{ end }}
@@ -86,15 +58,15 @@
       </section>
     {{ end }}
 
-    {{ with .Params.practice_cards }}
+    {{ with .Params.approach }}
       <section class="section section-tight">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">How we work</p>
-            <h2>What guides the project</h2>
+            <p class="eyebrow">Our Approach</p>
+            <h2>{{ .title }}</h2>
           </div>
           <div class="about-practice-grid">
-            {{ range . }}
+            {{ range .items }}
               <article class="offering-card about-practice-card">
                 <h3>{{ .title }}</h3>
                 <p>{{ .text }}</p>

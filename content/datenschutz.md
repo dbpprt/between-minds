@@ -3,7 +3,7 @@ title: "Datenschutzerklaerung"
 description: "Datenschutzhinweise fuer die statische Projekt-Website Between Minds Project."
 ---
 
-Dies ist die Datenschutzerklaerung fuer die statische Projekt-Website Between Minds Project. Die Website arbeitet derzeit ohne Kontaktformular, ohne Cookies, ohne eingebettete Social Plugins und ohne Analyse-Tools.
+Dies ist die Datenschutzerklaerung fuer die statische Projekt-Website Between Minds Project. Die Website arbeitet derzeit ohne serverseitiges Kontaktformular, ohne Cookies, ohne eingebettete Social Plugins und ohne Analyse-Tools.
 
 ## 1. Verantwortliche Stelle
 
@@ -12,10 +12,8 @@ Between Minds Project
 Deutschland
 
 Oeffentlich sichtbare Kontaktwege:  
-- Medium: [medium.com/@shammibappert](https://medium.com/@shammibappert)  
+- E-Mail: [betweenmindsproject@gmail.com](mailto:betweenmindsproject@gmail.com)  
 - Instagram: [instagram.com/betweenmindsproject](https://www.instagram.com/betweenmindsproject/)
-
-Eine separate Projekt-E-Mail-Adresse und eine Postanschrift werden auf dieser Website derzeit nicht veroeffentlicht.
 
 ## 2. Hosting
 
@@ -30,13 +28,13 @@ Die Verarbeitung technischer Server-Logfiles dient der Stabilitaet und Sicherhei
 
 ## 4. Kontaktaufnahme
 
-Wenn Sie ueber die verlinkten oeffentlichen Kontaktwege, etwa Medium oder Instagram, Kontakt aufnehmen, werden Ihre Angaben durch die jeweilige Plattform und gegebenenfalls durch die Projektbetreiberin zur Bearbeitung der Anfrage verarbeitet.
+Wenn Sie ueber die verlinkten oeffentlichen Kontaktwege, etwa E-Mail oder Instagram, Kontakt aufnehmen, werden Ihre Angaben durch die jeweilige Plattform und gegebenenfalls durch die Projektbetreiberin zur Bearbeitung der Anfrage verarbeitet.
 
 Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO, sofern die Anfrage auf einen Vertrag abzielt, sonst Artikel 6 Absatz 1 Buchstabe f DSGVO.
 
 ## 5. Externe Dienste
 
-In der aktuellen Fassung verwendet diese Website keine extern geladenen Schriftarten, keine Tracking-Dienste, keine eingebetteten Videos und keine Social-Media-Plugins. Es bestehen jedoch ausgehende Links zu Medium und Instagram.
+In der aktuellen Fassung verwendet diese Website keine extern geladenen Schriftarten, keine Tracking-Dienste, keine eingebetteten Videos und keine Social-Media-Plugins. Es bestehen jedoch ausgehende Links zu Instagram und zu einer E-Mail-Anwendung ueber mailto.
 
 Wenn Sie diese externen Links anklicken, verlassen Sie diese Website. Fuer die weitere Datenverarbeitung sind dann die jeweiligen Plattformbetreiber verantwortlich.
 

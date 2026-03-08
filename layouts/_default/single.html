@@ -11,9 +11,12 @@
           {{ else with .Params.description }}
             <p class="hero-intro">{{ . }}</p>
           {{ end }}
+          {{ with .Params.hero_meta }}
+            <p class="hero-meta">{{ . }}</p>
+          {{ end }}
           {{ with .Params.cta_label }}
             {{ $ctaUrl := $.Params.cta_url }}
-            {{ $ctaExternal := hasPrefix $ctaUrl "http" }}
+            {{ $ctaExternal := or (hasPrefix $ctaUrl "http") (hasPrefix $ctaUrl "mailto:") }}
             {{ if not $ctaExternal }}
               {{ $ctaUrl = $ctaUrl | strings.TrimPrefix `/` | relURL }}
             {{ end }}
@@ -54,7 +57,9 @@
         </article>
         {{ with .Params.highlights }}
           <aside class="detail-card">
-            <p class="note-kicker">Key focus</p>
+            {{ with $.Params.detail_title }}
+              <p class="note-kicker">{{ . }}</p>
+            {{ end }}
             <ul class="detail-list">
               {{ range . }}
                 <li>{{ . }}</li>
@@ -74,7 +79,7 @@
           </div>
           <div class="form-card" data-routing-form data-mode="{{ . }}">
             <form class="intake-form" action="#" method="post" novalidate>
-              {{ if eq . "dm" }}
+              {{ if or (eq . "dm") (eq . "waitlist") }}
                 <label class="field">
                   <span>Name</span>
                   <input type="text" name="name" placeholder="Your name">
@@ -97,10 +102,16 @@
                 <label class="field">
                   <span>Subject</span>
                   <select name="subject">
-                    <option>Relationship Support / Toxic Dynamics</option>
-                    <option>Conscious Parenting</option>
-                    <option>Book Inquiries</option>
-                    <option>Other (Please specify)</option>
+                    {{ with $.Params.form_subjects }}
+                      {{ range . }}
+                        <option>{{ . }}</option>
+                      {{ end }}
+                    {{ else }}
+                      <option>Relationship Support / Toxic Dynamics</option>
+                      <option>Conscious Parenting</option>
+                      <option>Book Inquiries</option>
+                      <option>Other (Please specify)</option>
+                    {{ end }}
                   </select>
                 </label>
                 <label class="field">
@@ -122,14 +133,14 @@
             {{ end }}
             <label class="field preview-field">
               <span>Message preview</span>
-              <textarea rows="{{ if eq . "dm" }}6{{ else }}8{{ end }}" readonly data-message-preview></textarea>
+              <textarea rows="{{ if or (eq . "dm") (eq . "waitlist") }}6{{ else }}8{{ end }}" readonly data-message-preview></textarea>
             </label>
             <p class="form-status" data-copy-status aria-live="polite"></p>
           </div>
         </div>
       </section>
     {{ end }}
-    {{ if or (eq .Params.form_mode "dm") (eq .Params.form_mode "contact") }}
+    {{ if or (eq .Params.form_mode "dm") (eq .Params.form_mode "waitlist") (eq .Params.form_mode "contact") }}
       <script>
         (() => {
           const forms = document.querySelectorAll("[data-routing-form]");
@@ -145,7 +156,7 @@
               const subject = formRoot.querySelector('[name="subject"]')?.value.trim();
               const message = formRoot.querySelector('[name="message"]')?.value.trim();
 
-              if (mode === "dm") {
+              if (mode === "dm" || mode === "waitlist") {
                 return [
                   "Hi Shammi and Alisa,",
                   "",
@@ -190,9 +201,9 @@
               try {
                 await navigator.clipboard.writeText(text);
                 if (status) {
-                  status.textContent = mode === "dm"
-                    ? "Waitlist message copied. You can now paste it into Instagram DM."
-                    : "Inquiry copied. You can now paste it into Instagram DM or Medium.";
+                  status.textContent = (mode === "dm" || mode === "waitlist")
+                    ? "Waitlist message copied. You can now paste it into email or Instagram."
+                    : "Inquiry copied. You can now paste it into email or Instagram.";
                 }
               } catch (error) {
                 if (status) {
