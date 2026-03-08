@@ -234,6 +234,16 @@ h3 {
   gap: 1.5rem;
 }
 
+.hero-grid > *,
+.story-grid > *,
+.founders-grid > *,
+.offerings-grid > *,
+.journal-shell > *,
+.contact-shell > *,
+.footer-grid > * {
+  min-width: 0;
+}
+
 .hero-grid {
   grid-template-columns: minmax(0, 1.03fr) minmax(22rem, 0.97fr);
   align-items: center;

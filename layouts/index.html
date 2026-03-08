@@ -25,10 +25,10 @@
         </div>
         <div class="hero-visuals">
           <div class="logo-card">
-            <img src="{{ $hero.mark | relURL }}" alt="{{ $hero.mark_alt }}">
+            <img src="{{ $hero.mark | strings.TrimPrefix `/` | relURL }}" alt="{{ $hero.mark_alt }}">
           </div>
           <figure class="hero-image-frame">
-            <img src="{{ $hero.image | relURL }}" alt="{{ $hero.image_alt }}">
+            <img src="{{ $hero.image | strings.TrimPrefix `/` | relURL }}" alt="{{ $hero.image_alt }}">
           </figure>
           <div class="hero-caption">
             <p class="note-kicker">Project shape</p>
@@ -67,7 +67,7 @@
           {{ range $founders.members }}
             <article class="founder-card">
               <figure class="founder-media">
-                <img src="{{ .image | relURL }}" alt="{{ .image_alt }}" loading="lazy">
+                <img src="{{ .image | strings.TrimPrefix `/` | relURL }}" alt="{{ .image_alt }}" loading="lazy">
               </figure>
               <div class="founder-body">
                 <p class="card-eyebrow">{{ .role }}</p>
@@ -133,7 +133,7 @@
           </div>
         </div>
         <figure class="journal-poster">
-          <img src="{{ $journal.image | relURL }}" alt="{{ $journal.image_alt }}" loading="lazy">
+          <img src="{{ $journal.image | strings.TrimPrefix `/` | relURL }}" alt="{{ $journal.image_alt }}" loading="lazy">
         </figure>
       </div>
     </section>
