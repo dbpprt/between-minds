@@ -5,7 +5,7 @@ enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term', 'RSS']
 
 [params]
-description = 'A psychology-informed space by Shammi and Alisa for essays, workshops, and reflective conversations on parenting, relationships, and personal change.'
+description = 'A clinical-chic, research-informed space by Shammi and Alisa translating psychology into compassionate guidance for relationships, parenting, and healing.'
 author = 'Shammi and Alisa'
 tagline = 'A project by Shammi and Alisa'
 brandLead = 'Between'
@@ -15,47 +15,42 @@ brandByline = 'by Shammi and Alisa'
 instagramHandle = '@betweenmindsproject'
 instagramUrl = 'https://www.instagram.com/betweenmindsproject/'
 mediumUrl = 'https://medium.com/@shammibappert'
-footerSummary = "A psychology-informed project shaped around essays, workshops, reflective conversations, and Shammi's forthcoming book Puddles, Patience, and Play."
-legalNotice = 'Public contact is available via Medium and Instagram.'
+footerSummary = 'Between Minds Project translates clinical research into compassionate guidance for relationships, parenting, and healing.'
+legalNotice = 'This site is educational and reflective. It does not replace therapy, crisis support, or medical care.'
 
 [[menus.main]]
-name = 'Mission'
-url = '#mission'
+name = 'Home'
+pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Founders'
-url = '#founders'
+name = 'About Us'
+pageRef = '/about'
 weight = 20
 
 [[menus.main]]
-name = 'Pillars'
-url = '#pillars'
+name = 'Insights'
+url = 'https://medium.com/@shammibappert'
 weight = 30
 
 [[menus.main]]
-name = 'Journal'
-url = '#journal'
+name = 'Upcoming Book'
+pageRef = '/upcoming-book'
 weight = 40
 
 [[menus.main]]
-name = 'About'
-pageRef = '/about'
+name = 'Contact'
+pageRef = '/contact'
 weight = 50
 
-[[menus.main]]
-name = 'Private Preview'
-pageRef = '/private-preview'
-weight = 60
-
 [[menus.footer]]
-name = 'Impressum'
-pageRef = '/impressum'
+name = 'Relationship Dynamics'
+pageRef = '/relationships-toxic-dynamics'
 weight = 10
 
 [[menus.footer]]
-name = 'Datenschutz'
-pageRef = '/datenschutz'
+name = 'Conscious Parenting'
+pageRef = '/conscious-parenting'
 weight = 20
 
 [[menus.footer]]
@@ -67,3 +62,13 @@ weight = 30
 name = 'Medium'
 url = 'https://medium.com/@shammibappert'
 weight = 40
+
+[[menus.footer]]
+name = 'Impressum'
+pageRef = '/impressum'
+weight = 50
+
+[[menus.footer]]
+name = 'Datenschutz'
+pageRef = '/datenschutz'
+weight = 60

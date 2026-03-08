@@ -44,10 +44,11 @@
             <ul>
               {{ range site.Menus.main }}
                 {{ $url := .URL }}
+                {{ $external := hasPrefix $url "http" }}
                 {{ if and (not $.IsHome) (hasPrefix $url "#") }}
                   {{ $url = printf "%s%s" site.Home.RelPermalink $url }}
                 {{ end }}
-                <li><a href="{{ $url }}">{{ .Name }}</a></li>
+                <li><a href="{{ $url }}"{{ if $external }} target="_blank" rel="noreferrer"{{ end }}>{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </nav>

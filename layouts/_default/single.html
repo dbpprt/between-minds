@@ -2,23 +2,207 @@
   {{ $theme := .Params.page_theme }}
   <main id="content" class="inner-page{{ with $theme }} inner-page-{{ . }}{{ end }}">
     <section class="inner-hero section">
-      <div class="container inner-hero-copy">
-        <p class="eyebrow">{{ site.Params.tagline }}</p>
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.description }}
-          <p class="hero-intro">{{ . }}</p>
-        {{ end }}
+      <div class="container page-hero-grid">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">{{ .Params.page_eyebrow | default site.Params.tagline }}</p>
+          <h1>{{ .Title }}</h1>
+          {{ with .Params.lead }}
+            <p class="hero-intro">{{ . }}</p>
+          {{ else with .Params.description }}
+            <p class="hero-intro">{{ . }}</p>
+          {{ end }}
+          {{ with .Params.cta_label }}
+            {{ $ctaUrl := $.Params.cta_url }}
+            {{ $ctaExternal := hasPrefix $ctaUrl "http" }}
+            {{ if not $ctaExternal }}
+              {{ $ctaUrl = $ctaUrl | strings.TrimPrefix `/` | relURL }}
+            {{ end }}
+            <div class="hero-actions">
+              <a class="button button-primary" href="{{ $ctaUrl }}"{{ if $ctaExternal }} target="_blank" rel="noreferrer"{{ end }}>{{ . }}</a>
+            </div>
+          {{ end }}
+        </div>
+        <aside class="page-visual">
+          {{ with .Params.page_image }}
+            <figure class="page-visual-image">
+              <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="{{ $.Params.page_image_alt }}">
+            </figure>
+          {{ end }}
+          {{ with .Params.visual_title }}
+            <div class="page-visual-card">
+              <p class="note-kicker">{{ $.Params.page_eyebrow | default site.Title }}</p>
+              <p class="page-visual-title">{{ . }}</p>
+              {{ with $.Params.visual_text }}
+                <p>{{ . }}</p>
+              {{ end }}
+              {{ with $.Params.highlights }}
+                <ul class="tag-list">
+                  {{ range . }}
+                    <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          {{ end }}
+        </aside>
       </div>
     </section>
     <section class="section section-tight">
-      <article class="container prose-card">
-        {{ .Content }}
-        {{ with .Params.cta_label }}
-          <div class="hero-actions">
-            <a class="button button-primary" href="{{ $.Params.cta_url }}">{{ . }}</a>
-          </div>
+      <div class="container detail-grid">
+        <article class="prose-card">
+          {{ .Content }}
+        </article>
+        {{ with .Params.highlights }}
+          <aside class="detail-card">
+            <p class="note-kicker">Key focus</p>
+            <ul class="detail-list">
+              {{ range . }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </aside>
         {{ end }}
-      </article>
+      </div>
     </section>
+    {{ with .Params.form_mode }}
+      <section class="section section-tight">
+        <div class="container form-shell">
+          <div class="section-heading form-heading">
+            <p class="eyebrow">{{ $.Title }}</p>
+            <h2>{{ $.Params.form_title }}</h2>
+            <p class="section-text">{{ $.Params.form_text }}</p>
+          </div>
+          <div class="form-card" data-routing-form data-mode="{{ . }}">
+            <form class="intake-form" action="#" method="post" novalidate>
+              {{ if eq . "dm" }}
+                <label class="field">
+                  <span>Name</span>
+                  <input type="text" name="name" placeholder="Your name">
+                </label>
+                <label class="field">
+                  <span>Optional note</span>
+                  <textarea name="message" rows="5" placeholder="I'd love to join the waitlist for Puddles, Patience and Play."></textarea>
+                </label>
+              {{ else if eq . "contact" }}
+                <div class="field-grid">
+                  <label class="field">
+                    <span>Name</span>
+                    <input type="text" name="name" placeholder="Your name">
+                  </label>
+                  <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="your@email.com">
+                  </label>
+                </div>
+                <label class="field">
+                  <span>Subject</span>
+                  <select name="subject">
+                    <option>Relationship Support / Toxic Dynamics</option>
+                    <option>Conscious Parenting</option>
+                    <option>Book Inquiries</option>
+                    <option>Other (Please specify)</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Message</span>
+                    <textarea name="message" rows="6" placeholder="Tell us a little about what you are navigating."></textarea>
+                  </label>
+              {{ end }}
+              <div class="hero-actions hero-actions-compact">
+                <button class="button button-primary" type="button" data-copy-message>{{ $.Params.form_submit }}</button>
+                {{ with $.Params.form_actions }}
+                  {{ range . }}
+                    <a class="button button-{{ .style }}" href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noreferrer"{{ end }}>{{ .label }}</a>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </form>
+            {{ with $.Params.form_note }}
+              <p class="form-note">{{ . }}</p>
+            {{ end }}
+            <label class="field preview-field">
+              <span>Message preview</span>
+              <textarea rows="{{ if eq . "dm" }}6{{ else }}8{{ end }}" readonly data-message-preview></textarea>
+            </label>
+            <p class="form-status" data-copy-status aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    {{ end }}
+    {{ if or (eq .Params.form_mode "dm") (eq .Params.form_mode "contact") }}
+      <script>
+        (() => {
+          const forms = document.querySelectorAll("[data-routing-form]");
+          forms.forEach((formRoot) => {
+            const mode = formRoot.dataset.mode;
+            const copyButton = formRoot.querySelector("[data-copy-message]");
+            const status = formRoot.querySelector("[data-copy-status]");
+            const preview = formRoot.querySelector("[data-message-preview]");
+
+            const buildMessage = () => {
+              const name = formRoot.querySelector('[name="name"]')?.value.trim();
+              const email = formRoot.querySelector('[name="email"]')?.value.trim();
+              const subject = formRoot.querySelector('[name="subject"]')?.value.trim();
+              const message = formRoot.querySelector('[name="message"]')?.value.trim();
+
+              if (mode === "dm") {
+                return [
+                  "Hi Shammi and Alisa,",
+                  "",
+                  "I'd love to join the waitlist for Puddles, Patience and Play.",
+                  name ? `Name: ${name}` : "",
+                  message ? `Note: ${message}` : "",
+                  "",
+                  "Warmly,"
+                ].filter(Boolean).join("\n");
+              }
+
+              return [
+                "Hi Shammi and Alisa,",
+                "",
+                subject ? `Subject: ${subject}` : "",
+                name ? `Name: ${name}` : "",
+                email ? `Email: ${email}` : "",
+                "",
+                message || "I'd like to get in touch through Between Minds Project.",
+                "",
+                "Warmly,"
+              ].filter(Boolean).join("\n");
+            };
+
+            const updatePreview = () => {
+              if (preview) {
+                preview.value = buildMessage();
+              }
+            };
+
+            formRoot.querySelectorAll("input, select, textarea").forEach((field) => {
+              if (!field.hasAttribute("readonly")) {
+                field.addEventListener("input", updatePreview);
+                field.addEventListener("change", updatePreview);
+              }
+            });
+
+            updatePreview();
+
+            copyButton?.addEventListener("click", async () => {
+              const text = buildMessage();
+              try {
+                await navigator.clipboard.writeText(text);
+                if (status) {
+                  status.textContent = mode === "dm"
+                    ? "Waitlist message copied. You can now paste it into Instagram DM."
+                    : "Inquiry copied. You can now paste it into Instagram DM or Medium.";
+                }
+              } catch (error) {
+                if (status) {
+                  status.textContent = "Copy was blocked in this browser. Please copy your text manually and continue via the buttons above.";
+                }
+              }
+            });
+          });
+        })();
+      </script>
+    {{ end }}
   </main>
 {{ end }}
