@@ -19,8 +19,8 @@ footerSummary = "A psychology-informed project shaped around essays, workshops, 
 legalNotice = 'Public contact is available via Medium and Instagram.'
 
 [[menus.main]]
-name = 'Story'
-url = '#story'
+name = 'Mission'
+url = '#mission'
 weight = 10
 
 [[menus.main]]
@@ -29,8 +29,8 @@ url = '#founders'
 weight = 20
 
 [[menus.main]]
-name = 'Offerings'
-url = '#offerings'
+name = 'Pillars'
+url = '#pillars'
 weight = 30
 
 [[menus.main]]
@@ -39,9 +39,14 @@ url = '#journal'
 weight = 40
 
 [[menus.main]]
-name = 'Contact'
-url = '#contact'
+name = 'About'
+pageRef = '/about'
 weight = 50
+
+[[menus.main]]
+name = 'Private Preview'
+pageRef = '/private-preview'
+weight = 60
 
 [[menus.footer]]
 name = 'Impressum'

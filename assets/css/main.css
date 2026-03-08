@@ -521,6 +521,10 @@ h3 {
   margin-top: 2rem;
 }
 
+.offerings-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .offering-card {
   min-height: 16rem;
   padding: 1.35rem;
@@ -630,6 +634,10 @@ h3 {
   gap: 1rem;
 }
 
+.path-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .quote-card {
   display: flex;
   flex-direction: column;
@@ -646,6 +654,22 @@ h3 {
 
 .quote-source {
   margin-top: 1.2rem;
+}
+
+.beyond-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: clamp(1.6rem, 4vw, 2.3rem);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: var(--shadow);
+}
+
+.path-card {
+  min-height: 12rem;
 }
 
 .contact-shell {
@@ -770,7 +794,8 @@ h3 {
   .journal-shell,
   .contact-shell,
   .quote-grid,
-  .footer-grid {
+  .footer-grid,
+  .beyond-card {
     grid-template-columns: 1fr;
   }
 
