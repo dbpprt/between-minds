@@ -1,14 +1,14 @@
 ---
 title: "Between Minds Project"
-description: "A founder-led, psychology-informed space by Shammi and Alisa for essays, workshops, and reflective tools for family and relationship life."
+description: "Founder-led psychology-informed guidance for relationships, parenting, and healing patterns at home."
 hero:
-  eyebrow: "Founder-led reflections for real life"
-  title: "Between us, beyond us."
-  intro: "We’re Shammi and Alisa. Between Minds Project grew from our own everyday conversations about parenting, partnership, communication, and the patterns we inherit without noticing. We build work that helps people pause, understand what is happening underneath, and choose a steadier response."
-  note: "Our core work currently lives in essays, guided conversations, and early-stage program design."
+  eyebrow: "Founder-led guidance"
+  title: "Your Journey, Your Way."
+  intro: "We’re Shammi and Alisa. Between Minds was built to bring psychology-informed clarity into real life—your home, your partnership, your hard conversations, your healing."
+  note: "If you’ve seen earlier screenshots, those were draft brand-strategy notes—not a blog. They were the skeleton. This is the living work."
   primary:
-    label: "Explore the pillars"
-    url: "#pillars"
+    label: "Choose your pathway"
+    url: "#pathways"
   secondary:
     label: "Meet the founders"
     url: "#founders"
@@ -16,56 +16,70 @@ hero:
   image_alt: "Shammi and Alisa facing one another across a table with laptops"
   mark: "/images/between-minds-mark.webp"
   mark_alt: "Between Minds Project wordmark"
+pathways:
+  title: "Start where you are"
+  intro: "Two focused pathways. One shared goal: more clarity, steadiness, and self-trust."
+  items:
+    - title: "Relationships & Toxic Dynamics"
+      text: "For people navigating manipulation, confusion, and repeating relational patterns."
+      action:
+        label: "Go to Relationships Pathway"
+        url: "/relationships-toxic-dynamics/"
+    - title: "Conscious Parenting"
+      text: "For parents who want to break inherited cycles and build secure emotional connection."
+      action:
+        label: "Go to Parenting Pathway"
+        url: "/conscious-parenting/"
 mission:
   title: "Our mission"
-  text: "To make emotional growth feel practical, not abstract. We translate psychology-informed thinking into language and tools people can actually use in ordinary moments at home, in relationships, and within themselves."
+  text: "To make emotional growth practical. We translate deep psychological thinking into clear language and usable tools for ordinary life."
   points:
     - title: "Human first"
-      text: "Warm, lived, and honest—never clinical for the sake of sounding credible."
+      text: "Warm and real, never distant or performative."
     - title: "Pattern aware"
-      text: "We help people notice recurring relational loops and interrupt them with more care."
-    - title: "Actionable reflection"
-      text: "Every insight should lead to something you can try, name, or change in real life."
+      text: "We name hidden dynamics so change becomes possible."
+    - title: "Actionable"
+      text: "Every insight should help you do something differently today."
 founders:
   title: "Meet Shammi and Alisa"
-  intro: "We built Between Minds as a shared practice: writing, design, and conversation shaping each other in public and in private."
+  intro: "A collaboration between clinical depth, reflective writing, and emotionally intelligent design."
   members:
     - name: "Shammi"
-      role: "Co-founder | Writer | Psychology-informed educator"
+      role: "Co-founder | Psychology-informed writer"
       image: "/images/shammi-portrait.jpg"
       image_alt: "Portrait of Shammi with handwritten notes"
-      bio: "I write from lived moments that many people carry quietly—misunderstanding, overwhelm, fear, and the wish to respond differently. My background in psychology helps me connect those moments to deeper patterns without losing warmth or clarity."
+      bio: "I write from the hard moments people often hide. I left the lab so I could help you in your living room—where parenting ruptures, relationship confusion, and emotional overwhelm actually happen."
       tags:
-        - "Essays rooted in lived experience"
-        - "Master’s background in psychology"
-        - "Workshops and reflective learning"
+        - "Psychology-informed"
+        - "Relational dynamics"
+        - "Founder-led reflections"
     - name: "Alisa"
-      role: "Co-founder | Design and experience lead"
+      role: "Co-founder | Design and emotional experience"
       image: "/images/alisa-portrait.jpg"
       image_alt: "Portrait of Alisa with handwritten notes"
-      bio: "I bring the visual and experiential side of this project—how ideas are felt, not just explained. I care about creating spaces that feel safe, beautiful, and clear enough for people to stay with hard topics a little longer."
+      bio: "I shape how this work is felt. My focus is turning complex ideas into spaces, language, and visuals that people can stay with—especially when the topic is difficult."
       tags:
-        - "Design and creative direction"
-        - "Visual clarity and emotional tone"
-        - "Founder collaboration and concept shaping"
+        - "Design and clarity"
+        - "Warm visual guidance"
+        - "Founder collaboration"
 pillars:
   title: "Our three pillars"
-  intro: "Everything we publish and build sits within these three areas."
-  note: "Between Minds Project is educational and reflective, not therapy or clinical treatment."
+  intro: "Everything we publish and build sits inside these themes."
+  note: "Between Minds is educational and reflective, not therapy or crisis care."
   items:
     - number: "01"
       title: "Connected Parenting"
-      text: "From control to connection: understanding what behavior is signaling, regulating ourselves first, and responding with steadiness."
+      text: "From control to connection, with co-regulation and emotional steadiness at the center."
     - number: "02"
       title: "Relational Boundaries"
-      text: "Naming unhealthy dynamics, protecting peace of mind, and setting limits without collapsing into guilt or aggression."
+      text: "Recognize harmful dynamics, protect your peace, and hold clear boundaries without losing yourself."
     - number: "03"
       title: "Narrative Identity"
-      text: "Rewriting inherited stories and self-concepts so change becomes possible across family life, partnership, and inner dialogue."
+      text: "Rewrite inherited stories and self-beliefs so new patterns can take root."
 journal:
   kicker: "Words Between Minds"
   title: "Beyond quick advice, into real reflection."
-  text: "Our journal traces the moments people usually rush past: a rupture with your child, a conversation that leaves you unseen, anger masking fear, or stress quietly setting the tone at home."
+  text: "Our journal explores the moments most people skip over: misattunement, fear under anger, boundary confusion, and the emotional climate inside a home."
   image: "/images/life-changes-poster.webp"
   image_alt: "Poster asking how you respond when life changes"
   actions:
@@ -87,27 +101,13 @@ journal:
       text: "A reflection on what sits beneath visible anger and why naming it shifts everything."
 beyond_journal:
   title: "Beyond the Journal"
-  text: "The writing is the entry point. We are now shaping deeper learning paths for people who want guided reflection, practical tools, and a calmer way of relating at home and in partnership."
+  text: "When you’re ready for deeper guidance, move into one of the focused pathways above and work with structured insight."
   action:
-    label: "Read about the Private Preview"
-    url: "/private-preview/"
-cta_paths:
-  title: "Two ways to continue"
-  intro: "Choose the path that fits where you are right now."
-  items:
-    - title: "Start with free reflection"
-      text: "Read essays, share with someone close, and use the prompts to shift one conversation this week."
-      action:
-        label: "Open the Journal"
-        url: "#journal"
-    - title: "Join the Private Preview"
-      text: "Get early access to our book-development journey, guided notes, and upcoming founder-led sessions."
-      action:
-        label: "Go to Private Preview"
-        url: "/private-preview/"
+    label: "Choose your pathway"
+    url: "#pathways"
 contact:
   title: "Let’s stay in touch"
-  text: "For collaborations, workshop inquiries, and founder conversations, reach out via Medium or Instagram."
+  text: "For collaborations, founder conversations, and workshop inquiries, reach out via Medium or Instagram."
   actions:
     - label: "Medium"
       url: "https://medium.com/@shammibappert"

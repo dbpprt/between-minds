@@ -1,30 +1,23 @@
 ---
 title: "About"
-description: "A founder note from Shammi and Alisa on why Between Minds exists and what it is here to offer."
+description: "About the founders behind Between Minds Project."
 ---
 
-Between Minds started at our own kitchen-table moments.
+Between Minds began with two founders asking a simple question: how do we bring real psychological insight into everyday life without losing warmth?
 
-The moments where one of us said, “I know better, but I still reacted that way.”
-The moments where parenting felt tender and overwhelming at the same time.
-The moments where love was present, but understanding was missing.
+What you may have seen in earlier screenshots were brand strategy drafts—the skeleton, not the finished voice. This site is the foundation brought to life.
 
-We created this project because we wanted a space that could hold both truth and gentleness.
-A space where emotional growth feels human, not performative.
+## Shammi
 
-Shammi brings the writing and psychology-informed lens. Alisa brings design, emotional tone, and experience shaping.
-Together, we build work that helps people understand what is happening underneath a reaction—and choose something steadier.
+I work at the intersection of psychology and lived experience. I left the lab so I could help you in your living room—where ruptures, stress, fear, and repair actually unfold. My focus is helping people identify patterns clearly and respond with steadiness.
 
-## What guides us
+## Alisa
 
-- We stay close to real life, not abstract theory.
-- We value emotional honesty over perfection.
-- We aim for practical clarity people can use immediately.
+I shape the visual and emotional experience of Between Minds. My work turns complex ideas into language, design, and structure that feel safe enough to stay with and clear enough to act on.
 
-## What this is—and what it isn’t
+## How we work together
 
-Between Minds is an educational and reflective project.
-It is not a clinical service, diagnosis platform, or emergency support channel.
+Shammi leads the psychological framework and reflective writing.
+Alisa leads design clarity, experience tone, and concept translation.
 
-If you want to begin, start with the journal.
-If you want to go deeper, explore our Private Preview path.
+Together, we build founder-led resources for relationships, parenting, and identity-level change.

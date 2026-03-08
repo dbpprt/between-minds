@@ -717,6 +717,28 @@ h3 {
   background: rgba(255, 255, 255, 0.76);
 }
 
+.inner-page-relationship .inner-hero {
+  background: linear-gradient(180deg, #222831 0%, #2f3a47 100%);
+}
+
+.inner-page-relationship .inner-hero .eyebrow,
+.inner-page-relationship .inner-hero .hero-intro,
+.inner-page-relationship .inner-hero h1 {
+  color: #eef2f6;
+}
+
+.inner-page-relationship .prose-card {
+  background: rgba(235, 242, 248, 0.85);
+}
+
+.inner-page-parenting .inner-hero {
+  background: linear-gradient(180deg, #fff5d9 0%, #f7e8b8 100%);
+}
+
+.inner-page-parenting .prose-card {
+  background: rgba(255, 252, 240, 0.94);
+}
+
 .prose-card h2 {
   font-size: clamp(1.7rem, 3vw, 2.15rem);
   margin-top: 2rem;

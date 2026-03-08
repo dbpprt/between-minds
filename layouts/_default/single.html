@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <main id="content">
+  {{ $theme := .Params.page_theme }}
+  <main id="content" class="inner-page{{ with $theme }} inner-page-{{ . }}{{ end }}">
     <section class="inner-hero section">
       <div class="container inner-hero-copy">
         <p class="eyebrow">{{ site.Params.tagline }}</p>
@@ -12,6 +13,11 @@
     <section class="section section-tight">
       <article class="container prose-card">
         {{ .Content }}
+        {{ with .Params.cta_label }}
+          <div class="hero-actions">
+            <a class="button button-primary" href="{{ $.Params.cta_url }}">{{ . }}</a>
+          </div>
+        {{ end }}
       </article>
     </section>
   </main>

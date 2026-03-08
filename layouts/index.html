@@ -5,7 +5,7 @@
   {{ $pillars := .Params.pillars }}
   {{ $journal := .Params.journal }}
   {{ $beyond := .Params.beyond_journal }}
-  {{ $paths := .Params.cta_paths }}
+  {{ $pathways := .Params.pathways }}
   {{ $contact := .Params.contact }}
 
   <main id="content">
@@ -35,6 +35,27 @@
             <p class="note-kicker">How we work</p>
             <p>Founder-led writing, visual clarity, and practical emotional tools for everyday life.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pathways">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Pathways</p>
+          <h2>{{ $pathways.title }}</h2>
+          <p class="section-text">{{ $pathways.intro }}</p>
+        </div>
+        <div class="quote-grid path-grid">
+          {{ range $pathways.items }}
+            <article class="quote-card path-card">
+              <h3>{{ .title }}</h3>
+              <p>{{ .text }}</p>
+              <div class="hero-actions">
+                <a class="button button-primary" href="{{ .action.url | relURL }}">{{ .action.label }}</a>
+              </div>
+            </article>
+          {{ end }}
         </div>
       </div>
     </section>
@@ -148,27 +169,6 @@
         </div>
         <div class="hero-actions">
           <a class="button button-primary" href="{{ $beyond.action.url | relURL }}">{{ $beyond.action.label }}</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Continue</p>
-          <h2>{{ $paths.title }}</h2>
-          <p class="section-text">{{ $paths.intro }}</p>
-        </div>
-        <div class="quote-grid path-grid">
-          {{ range $paths.items }}
-            <article class="quote-card path-card">
-              <h3>{{ .title }}</h3>
-              <p>{{ .text }}</p>
-              <div class="hero-actions">
-                <a class="button button-secondary" href="{{ .action.url | relURL }}">{{ .action.label }}</a>
-              </div>
-            </article>
-          {{ end }}
         </div>
       </div>
     </section>
