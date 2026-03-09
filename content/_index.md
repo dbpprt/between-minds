@@ -23,7 +23,7 @@ mission:
   text: "We empower individuals and parents to navigate their mental health journey with clarity. By translating complex psychological research into actionable wisdom, we help you redefine how you relate to yourself, your partners, and your children."
 services:
   title: "Ways to Work Together"
-  intro: "Practical, psychologically grounded pathways for relationships, parenting, and self-awareness."
+  intro: "These are Shammi's offerings through Between Minds Project:"
   items:
     - title: "1-to-1 Sessions"
       text: "A private, focused space to explore what's holding you back - in relationships, parenting, or your inner world. Grounded in clinical psychology and emotional intelligence, these sessions are tailored entirely to you."
@@ -35,12 +35,8 @@ services:
       text: "Shammi's first book - a warm, research-backed guide to raising emotionally intelligent children from birth to five. Currently finishing. Join the waitlist."
       url: "/upcoming-book/"
       label: "View the Book"
-    - title: "Mind Companion - Coming Soon"
-      text: "An emotionally intelligent AI companion for self-reflection and support. Not therapy. Not romantic. Just a thoughtful, always-available space to think things through. Launching soon."
-companion:
-  title: "Mind Companion - Coming Soon"
-  text: "An emotionally intelligent companion built for reflection, not diagnosis. A safe, thoughtful space to check in with yourself - available any time. Launching soon through Between Minds Project."
-  note: "A companion for self-reflection. Not therapy. Not romantic. Just honest support."
+    - title: "Kara"
+      text: "Shammi's AI companion - coming soon. An emotionally intelligent space for self-reflection and emotional support."
 pillars:
   title: "Three Core Paths"
   intro: "The work moves across relationships, parenting, and inner clarity - always with emotional intelligence at the center."

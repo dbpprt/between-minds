@@ -26,7 +26,9 @@ founders:
 
       Between Minds Project is where all of that lives. I'm so glad you're here.
 
-      Thank you for being part of this journey. There is so much more to come.
+      A personal note from Shammi - alongside Between Minds Project, I am also finishing my first book, *Puddles, Patience and Play*, and founding Kara, a new AI companion venture. Both grew out of the same belief that psychology should be accessible to everyone.
+
+      Thank you for being part of this journey. There is so much more to come. 🤍
   - name: "Alisa"
     title: "Co-Founder, Between Minds Project"
     credentials: "BSc Psychology"

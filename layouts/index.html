@@ -2,7 +2,6 @@
   {{ $hero := .Params.hero }}
   {{ $mission := .Params.mission }}
   {{ $services := .Params.services }}
-  {{ $companion := .Params.companion }}
   {{ $pillars := .Params.pillars }}
   {{ $book := .Params.book }}
 
@@ -72,19 +71,6 @@
               {{ end }}
             </article>
           {{ end }}
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-        <div class="companion-shell">
-          <div>
-            <p class="eyebrow">Coming Soon</p>
-            <h2>{{ $companion.title }}</h2>
-            <p class="section-text">{{ $companion.text }}</p>
-          </div>
-          <p class="companion-note">{{ $companion.note }}</p>
         </div>
       </div>
     </section>
