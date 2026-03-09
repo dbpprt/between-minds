@@ -13,11 +13,6 @@ hero:
     url: "/insights/"
   image: "/images/shammi-alisa-hero.webp"
   image_alt: "Shammi and Alisa facing one another across a table with laptops"
-  credentials:
-    - "M.A. Clinical Psychology"
-    - "PhD Researcher"
-    - "Clinical & Corporate Experience"
-    - "Author"
 mission:
   title: "Our mission"
   text: "We empower individuals and parents to navigate their mental health journey with clarity. By translating complex psychological research into actionable wisdom, we help you redefine how you relate to yourself, your partners, and your children."
@@ -35,8 +30,9 @@ services:
       text: "Shammi's first book - a warm, research-backed guide to raising emotionally intelligent children from birth to five. Currently finishing. Join the waitlist."
       url: "/upcoming-book/"
       label: "View the Book"
-    - title: "Kara"
-      text: "Shammi's AI companion - coming soon. An emotionally intelligent space for self-reflection and emotional support."
+    - title: "Kara — Coming Soon"
+      text: "An emotionally intelligent AI companion designed for reflection, not diagnosis. Not romantic. Not a therapist. Just a safe, thoughtful space to check in with yourself, available any time."
+      signature: "Shammi"
 pillars:
   title: "Three Core Paths"
   intro: "The work moves across relationships, parenting, and inner clarity - always with emotional intelligence at the center."

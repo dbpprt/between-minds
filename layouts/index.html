@@ -25,18 +25,6 @@
       </div>
     </section>
 
-    {{ with $hero.credentials }}
-      <section class="credentials-section">
-        <div class="container">
-          <ul class="credentials-strip" aria-label="Credentials">
-            {{ range . }}
-              <li>{{ . }}</li>
-            {{ end }}
-          </ul>
-        </div>
-      </section>
-    {{ end }}
-
     <section class="section story-band" id="mission">
       <div class="container story-grid">
         <div class="story-copy">
@@ -64,6 +52,9 @@
             <article class="offering-card service-card">
               <h3>{{ .title }}</h3>
               <p>{{ .text }}</p>
+              {{ with .signature }}
+                <p class="service-signoff">— {{ . }}</p>
+              {{ end }}
               {{ with .url }}
                 <div class="card-actions">
                   <a class="text-link" href="{{ . | strings.TrimPrefix `/` | relURL }}">{{ $item.label }}</a>

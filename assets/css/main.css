@@ -573,6 +573,12 @@ h3 {
   align-content: start;
 }
 
+.service-signoff {
+  margin: 0.6rem 0 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .card-actions {
   margin-top: 1rem;
 }
@@ -712,6 +718,10 @@ h3 {
   align-items: start;
 }
 
+.page-hero-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .about-hero-grid {
   grid-template-columns: minmax(0, 0.94fr) minmax(22rem, 1.06fr);
   align-items: start;
@@ -805,6 +815,10 @@ h3 {
 
 .about-story-card p:last-child {
   margin-bottom: 0;
+}
+
+.prose-shell {
+  max-width: 72rem;
 }
 
 .about-partnership-card {

@@ -24,11 +24,11 @@ founders:
 
       I currently offer 1-to-1 sessions, workshops, and courses - all grounded in clinical psychology and emotional intelligence, and all designed to feel warm, clear, and genuinely useful. I'm also currently finishing my first book, *Puddles, Patience and Play* - a research-backed guide to raising emotionally intelligent children from birth to five.
 
+      I'm also building something new. Kara is an AI companion I'm developing - grounded in emotional intelligence and designed to support reflection without replacing human connection. Not diagnostic. Not romantic. Something closer to a thoughtful presence that's available when you need it most. More on that soon.
+
       Between Minds Project is where all of that lives. I'm so glad you're here.
 
-      A personal note from Shammi - alongside Between Minds Project, I am also finishing my first book, *Puddles, Patience and Play*, and founding Kara, a new AI companion venture. Both grew out of the same belief that psychology should be accessible to everyone.
-
-      Thank you for being part of this journey. There is so much more to come. 🤍
+      Thank you for being part of this journey. There's more ahead. Stay with us. 🤍
   - name: "Alisa"
     title: "Co-Founder, Between Minds Project"
     credentials: "BSc Psychology"
@@ -53,6 +53,8 @@ approach:
       text: "Clinical knowledge doesn't exist in isolation here. Everything we share is translated through the reality of relationships, families, and the emotional patterns we all carry - consciously or not. Years inside clinical settings, corporate environments, and the everyday complexity of parenting inform every word."
     - title: "Emotional intelligence without performance"
       text: "EQ - emotional intelligence - is at the heart of everything we do. Not as a buzzword, but as a daily practice. A way of understanding yourself and others that doesn't require you to have it all figured out. The work here is serious, but never cold."
+    - title: "The thoughts underneath the feelings"
+      text: "A lot of the work here is quietly shaped by cognitive behavioural principles - the idea that the stories we tell ourselves about events matter as much as the events themselves. We don't make that clinical. We make it practical. When you start to notice the thought underneath the feeling, and the belief underneath the thought, something shifts. That's the work. Not fixing you - helping you see yourself more clearly."
 ---
 
 We talk about parenting, partnership, self-awareness, and all that unfolds between minds.

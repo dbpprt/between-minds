@@ -1,8 +1,10 @@
 {{ define "main" }}
   {{ $theme := .Params.page_theme }}
+  {{ $hasVisual := or .Params.page_image .Params.visual_title }}
+  {{ $hasContent := gt (len .PlainWords) 0 }}
   <main id="content" class="inner-page{{ with $theme }} inner-page-{{ . }}{{ end }}">
     <section class="inner-hero section">
-      <div class="container page-hero-grid">
+      <div class="container page-hero-grid{{ if not $hasVisual }} page-hero-grid-single{{ end }}">
         <div class="inner-hero-copy">
           <p class="eyebrow">{{ .Params.page_eyebrow | default site.Params.tagline }}</p>
           <h1>{{ .Title }}</h1>
@@ -25,58 +27,76 @@
             </div>
           {{ end }}
         </div>
-        <aside class="page-visual">
-          {{ with .Params.page_image }}
-            <figure class="page-visual-image">
-              <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="{{ $.Params.page_image_alt }}">
-            </figure>
-          {{ end }}
-          {{ with .Params.visual_title }}
-            <div class="page-visual-card">
-              <p class="note-kicker">{{ $.Params.page_eyebrow | default site.Title }}</p>
-              <p class="page-visual-title">{{ . }}</p>
-              {{ with $.Params.visual_text }}
-                <p>{{ . }}</p>
-              {{ end }}
-              {{ with $.Params.highlights }}
-                <ul class="tag-list">
-                  {{ range . }}
-                    <li>{{ . }}</li>
-                  {{ end }}
-                </ul>
-              {{ end }}
-            </div>
-          {{ end }}
-        </aside>
-      </div>
-    </section>
-    <section class="section section-tight">
-      <div class="container detail-grid">
-        <article class="prose-card">
-          {{ .Content }}
-        </article>
-        {{ with .Params.highlights }}
-          <aside class="detail-card">
-            {{ with $.Params.detail_title }}
-              <p class="note-kicker">{{ . }}</p>
+        {{ if $hasVisual }}
+          <aside class="page-visual">
+            {{ with .Params.page_image }}
+              <figure class="page-visual-image">
+                <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="{{ $.Params.page_image_alt }}">
+              </figure>
             {{ end }}
-            <ul class="detail-list">
-              {{ range . }}
-                <li>{{ . }}</li>
-              {{ end }}
-            </ul>
+            {{ with .Params.visual_title }}
+              <div class="page-visual-card">
+                <p class="note-kicker">{{ $.Params.page_eyebrow | default site.Title }}</p>
+                <p class="page-visual-title">{{ . }}</p>
+                {{ with $.Params.visual_text }}
+                  <p>{{ . }}</p>
+                {{ end }}
+                {{ with $.Params.highlights }}
+                  <ul class="tag-list">
+                    {{ range . }}
+                      <li>{{ . }}</li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+              </div>
+            {{ end }}
           </aside>
         {{ end }}
       </div>
     </section>
+    {{ if or $hasContent .Params.highlights }}
+      <section class="section section-tight">
+        {{ if .Params.highlights }}
+          <div class="container detail-grid">
+            {{ if $hasContent }}
+              <article class="prose-card">
+                {{ .Content }}
+              </article>
+            {{ end }}
+            <aside class="detail-card">
+              {{ with $.Params.detail_title }}
+                <p class="note-kicker">{{ . }}</p>
+              {{ end }}
+              <ul class="detail-list">
+                {{ range .Params.highlights }}
+                  <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </aside>
+          </div>
+        {{ else }}
+          <div class="container prose-shell">
+            <article class="prose-card">
+              {{ .Content }}
+            </article>
+          </div>
+        {{ end }}
+      </section>
+    {{ end }}
     {{ with .Params.form_mode }}
       <section class="section section-tight">
         <div class="container form-shell">
-          <div class="section-heading form-heading">
-            <p class="eyebrow">{{ $.Title }}</p>
-            <h2>{{ $.Params.form_title }}</h2>
-            <p class="section-text">{{ $.Params.form_text }}</p>
-          </div>
+          {{ if or $.Params.form_title $.Params.form_text }}
+            <div class="section-heading form-heading">
+              <p class="eyebrow">{{ $.Title }}</p>
+              {{ with $.Params.form_title }}
+                <h2>{{ . }}</h2>
+              {{ end }}
+              {{ with $.Params.form_text }}
+                <p class="section-text">{{ . }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
           <div class="form-card" data-routing-form data-mode="{{ . }}">
             <form class="intake-form" action="#" method="post" novalidate>
               {{ if or (eq . "dm") (eq . "waitlist") }}
@@ -158,7 +178,7 @@
 
               if (mode === "dm" || mode === "waitlist") {
                 return [
-                  "Hi Shammi and Alisa,",
+                  "Hi Shammi,",
                   "",
                   "I'd love to join the waitlist for Puddles, Patience and Play.",
                   name ? `Name: ${name}` : "",
@@ -169,7 +189,7 @@
               }
 
               return [
-                "Hi Shammi and Alisa,",
+                "Hi Shammi,",
                 "",
                 subject ? `Subject: ${subject}` : "",
                 name ? `Name: ${name}` : "",
@@ -202,7 +222,7 @@
                 await navigator.clipboard.writeText(text);
                 if (status) {
                   status.textContent = (mode === "dm" || mode === "waitlist")
-                    ? "Waitlist message copied. You can now paste it into email or Instagram."
+                    ? "Thanks for joining - Shammi will be in touch. Your message is copied for email or Instagram."
                     : "Inquiry copied. You can now paste it into email or Instagram.";
                 }
               } catch (error) {
