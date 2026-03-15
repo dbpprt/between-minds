@@ -30,7 +30,6 @@ jobs:
           fetch-depth: 0
 
       - name: Configure GitHub Pages
-        id: pages
         uses: actions/configure-pages@v5
 
       - name: Set up Hugo
@@ -43,7 +42,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --cleanDestinationDir
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

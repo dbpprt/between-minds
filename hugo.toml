@@ -1,4 +1,4 @@
-baseURL = 'https://dbpprt.github.io/between-minds/'
+baseURL = 'https://betweenmindsproject.com/'
 languageCode = 'en'
 title = 'Between Minds Project'
 enableRobotsTXT = true
