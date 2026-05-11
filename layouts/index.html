@@ -52,6 +52,22 @@
             <article class="offering-card service-card">
               <h3>{{ .title }}</h3>
               <p>{{ .text }}</p>
+              {{ with .entries }}
+                <div class="service-detail-list">
+                  {{ range . }}
+                    <div class="service-detail">
+                      <h4>{{ .title }}</h4>
+                      <p>{{ .text }}</p>
+                      {{ with .note }}
+                        <p class="service-detail-note">{{ . }}</p>
+                      {{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+              {{ end }}
+              {{ with .note }}
+                <p class="service-note">{{ . }}</p>
+              {{ end }}
               {{ with .signature }}
                 <p class="service-signoff">— {{ . }}</p>
               {{ end }}

@@ -573,6 +573,34 @@ h3 {
   align-content: start;
 }
 
+.service-detail-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.service-detail h4 {
+  margin: 0 0 0.25rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.service-detail p {
+  margin-bottom: 0.4rem;
+}
+
+.service-detail-note,
+.service-note {
+  color: var(--blue-deep);
+  font-weight: 600;
+}
+
+.service-note {
+  margin-top: 1rem;
+}
+
 .service-signoff {
   margin: 0.6rem 0 0;
   color: var(--ink);
