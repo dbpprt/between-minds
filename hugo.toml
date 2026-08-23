@@ -1,5 +1,5 @@
 baseURL = 'https://betweenmindsproject.com/'
-languageCode = 'en'
+locale = 'en'
 title = 'Between Minds Project'
 enableRobotsTXT = true
 disableKinds = ['taxonomy', 'term', 'RSS']

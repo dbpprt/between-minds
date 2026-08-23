@@ -6,6 +6,8 @@ Production URL: `https://betweenmindsproject.com/`
 
 ## Development
 
+Prerequisite: Hugo Extended `0.165.0` (the version used by CI).
+
 ```bash
 make dev
 ```
