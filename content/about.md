@@ -27,6 +27,13 @@ founders:
       And I am building something new. Kara is an AI companion grounded in emotional intelligence, designed to support reflection without replacing human connection. Not diagnostic. Not romantic. A space to check in with yourself when you need it. More on that soon.
 
       Between Minds Project is where all of that lives. I am glad you are here.
+visuals:
+  - image: "/images/my-story.jpg"
+    image_alt: "My Story: born in India, rooted in Germany, raising Hanna between two worlds, and helping people navigate relationships, parenting and self-awareness"
+  - image: "/images/work-with-me.jpg"
+    image_alt: "Work With Me: personal stories, psychology resources, sessions and courses from Shammi"
+    url: "/contact/"
+    label: "Explore ways to work with Shammi"
 approach:
   title: "My Approach"
   items:

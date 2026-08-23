@@ -57,6 +57,28 @@
       </section>
     {{ end }}
 
+    {{ with .Params.visuals }}
+      <section class="section section-tight about-visual-gallery-section" aria-labelledby="about-visual-gallery-title">
+        <div class="container">
+          <h2 id="about-visual-gallery-title" class="visually-hidden">More about Shammi</h2>
+          <div class="about-visual-gallery">
+            {{ range . }}
+              {{ $item := . }}
+              <figure class="about-gallery-card">
+                {{ with .url }}
+                  <a href="{{ . | strings.TrimPrefix `/` | relURL }}" aria-label="{{ $item.label }}">
+                    <img src="{{ $item.image | strings.TrimPrefix `/` | relURL }}" alt="{{ $item.image_alt }}" loading="lazy">
+                  </a>
+                {{ else }}
+                  <img src="{{ .image | strings.TrimPrefix `/` | relURL }}" alt="{{ .image_alt }}" loading="lazy">
+                {{ end }}
+              </figure>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
     {{ with .Params.approach }}
       <section class="section section-tight">
         <div class="container">
