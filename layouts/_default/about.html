@@ -31,9 +31,8 @@
       <section class="section section-tight about-founders-section">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Founders</p>
-            <h2>Meet Shammi and Alisa</h2>
-            <p class="section-text">Between Minds Project is shaped by one voice rooted in clinical psychology and one rooted in design, emotional tone, and how reflective work feels in the body.</p>
+            <p class="eyebrow">The person behind the project</p>
+            <h2>Meet Shammi</h2>
           </div>
           <div class="about-founder-stack">
             {{ range . }}
@@ -62,7 +61,7 @@
       <section class="section section-tight">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Our Approach</p>
+            <p class="eyebrow">How I work</p>
             <h2>{{ .title }}</h2>
           </div>
           <div class="about-practice-grid">
@@ -71,6 +70,25 @@
                 <h3>{{ .title }}</h3>
                 <p>{{ .text }}</p>
               </article>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+
+    {{ with .Params.closing }}
+      <section class="section section-tight about-closing-section">
+        <div class="container about-closing-shell">
+          {{ with .image }}
+            <figure class="about-statement-banner" aria-labelledby="about-closing-quote">
+              <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="">
+              <figcaption id="about-closing-quote" class="visually-hidden">{{ $.Params.closing.quote }}</figcaption>
+            </figure>
+          {{ end }}
+          <div class="about-closing-copy">
+            <p class="about-disclaimer">{{ .disclaimer }}</p>
+            {{ with .action }}
+              <a class="button button-primary" href="{{ .url | strings.TrimPrefix `/` | relURL }}">{{ .label }}</a>
             {{ end }}
           </div>
         </div>

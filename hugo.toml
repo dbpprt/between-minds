@@ -6,12 +6,13 @@ disableKinds = ['taxonomy', 'term', 'RSS']
 
 [params]
 description = 'Between Minds Project brings clinical psychology, emotional intelligence, and honest human writing into everyday life through sessions, workshops, courses, and reflective resources.'
-author = 'Shammi and Alisa'
-tagline = 'A project by Shammi and Alisa'
+author = 'Shammi Bappert'
+tagline = 'Clinical psychology meets real life'
 brandLead = 'Between'
 brandFocus = 'Minds'
 brandTail = 'Project'
-brandByline = 'by Shammi and Alisa'
+brandByline = 'Shammi Bappert'
+brandLogo = '/images/between-minds-logo.png'
 instagramHandle = '@betweenmindsproject'
 instagramUrl = 'https://www.instagram.com/betweenmindsproject/'
 email = 'betweenmindsproject@gmail.com'
@@ -24,7 +25,7 @@ pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'About Us'
+name = 'About'
 pageRef = '/about'
 weight = 20
 

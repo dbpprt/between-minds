@@ -31,13 +31,20 @@
       <header class="site-header" id="top">
         <div class="container header-inner">
           <a class="brand" href="{{ site.Home.RelPermalink }}">
+            {{ with site.Params.brandLogo }}
+              <span class="brand-mark" aria-hidden="true">
+                <img src="{{ . | strings.TrimPrefix `/` | relURL }}" alt="">
+              </span>
+            {{ end }}
             <span class="brand-copy">
               <span class="brand-title">
                 <span>{{ site.Params.brandLead }}</span>
                 <span class="brand-focus">{{ site.Params.brandFocus }}</span>
                 <span>{{ site.Params.brandTail }}</span>
               </span>
-              <span class="brand-subtitle">{{ site.Params.brandByline }}</span>
+              {{ with site.Params.brandByline }}
+                <span class="brand-subtitle">{{ . }}</span>
+              {{ end }}
             </span>
           </a>
           <nav class="site-nav" aria-label="Primary">

@@ -11,8 +11,8 @@ hero:
   secondary:
     label: "Explore the Blog"
     url: "/insights/"
-  image: "/images/shammi-alisa-hero.webp"
-  image_alt: "Shammi and Alisa facing one another across a table with laptops"
+  image: "/images/shammi-portrait.jpg"
+  image_alt: "Portrait of Shammi with handwritten notes about psychology and motherhood"
 mission:
   title: "Our mission"
   text: "We empower individuals and parents to navigate their mental health journey with clarity. By translating complex psychological research into actionable wisdom, we help you redefine how you relate to yourself, your partners, and your children."

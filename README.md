@@ -1,6 +1,6 @@
 # Between Minds Project
 
-A Hugo site for Between Minds Project, redesigned around Shammi and Alisa's shared work.
+A Hugo site for Shammi Bappert's Between Minds Project.
 
 Production URL: `https://betweenmindsproject.com/`
 
